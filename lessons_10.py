@@ -102,9 +102,17 @@ class student:
         return(self.age)
     def numbers (self):
         return(self.num_group)
-    def new_age(age):
-        self.age=age
+    def change_age(self, new_age):
+        self.age = new_age
+    def change_num_number(self, new_num_number):
+        self.num_group = new_num_number
 student1=student("Serge", 12, 24)
-print (student1.ages())
-print (student1.names())
-print (student1.numbers())
+print (f"Возрост студента :", (student1.ages()))
+print ("Имя студента :", (student1.names()))
+print ("Группа :",(student1.numbers()))
+
+student1.change_age(33)
+print ("Изменнения данных возроста студента на - ",(student1.ages()))
+
+student1.change_num_number(15)
+print ("Изменнения данных группы  студента на - " ,(student1.numbers()))
